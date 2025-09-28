@@ -25,7 +25,7 @@ const blogTheme = getThemeConfig({
   // search: false,
 
   // 默认开启 markdown 图表支持（会增加一定的构建耗时）
-  // mermaid: false
+  mermaid: false,
 
   // 页脚
   footer: {
