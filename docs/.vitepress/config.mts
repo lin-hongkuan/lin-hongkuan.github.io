@@ -17,7 +17,7 @@ export default defineConfig({
   extends: blogTheme,
   // base,
   lang: 'zh-cn',
-  title: '@linhkblog',
+  title: '@linhk/blog',
   description: 'linhongkuan的个人博客',
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
