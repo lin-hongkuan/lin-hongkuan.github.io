@@ -19,6 +19,7 @@
     "doc": "docs"
   },
   "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
     "pagefind": "^1.3.0",
     "sass": "^1.76.0",
     "typescript": "^5.4.5",

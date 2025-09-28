@@ -20,6 +20,9 @@ export default defineConfig({
   title: '@linhk/blog',
   description: 'linhongkuan的个人博客',
   lastUpdated: true,
+  markdown: {
+    math: true
+  },
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
