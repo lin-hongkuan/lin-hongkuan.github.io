@@ -64,6 +64,13 @@ const blogTheme = getThemeConfig({
         'https://vitepress.dev/vitepress-logo-large.webp',
       url: 'https://vitepress.dev/',
     },
+    {
+      nickname: 'SIMON BLOG',
+      des: 'Simon的博客，基于 vitepress 实现',
+      avatar:
+        'https://zhuzihan.com/logo.jpg',
+      url: 'https://zhuzihan.com/',
+    },
   ],
 
   // 公告
