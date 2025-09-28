@@ -1,22 +1,33 @@
 .VPHome {
-  // 定义遮罩样式
-  background: radial-gradient(ellipse,
-      rgba(var(--bg-gradient-home), 1) 0%,
-      rgba(var(--bg-gradient-home), 0) 150%);
-// 我的参数是
-//     rgba(var(--bg-gradient-home), 0.53) 0%,
-//     rgba(var(--bg-gradient-home), 0) 2000%);
-
-  // 自定义首页背景图
-  &::before {
-    // 图片来源：https://zhuanlan.zhihu.com/p/54060187
-    background-image: url(/bg.webp);//换这个改变背景图片
-    background-size: cover;
-  }
+  // 基础样式（两种模式共用的非渐变属性可放这里）
+  position: relative; /* 确保伪元素定位正确 */
 }
 
+// 深色模式遮罩（使用你的参数）
+html.dark .VPHome {
+  background: radial-gradient(ellipse,
+      rgba(var(--bg-gradient-home), 1) 0%,
+      rgba(var(--bg-gradient-home), 0) 100%);
+}
 
-// 亮色模式下切换背景
-// html:not(.dark) .VPHome::before {
-//   background-image: url(/bgw.webp);
-// }
+// 亮色模式遮罩（可自定义不同参数）
+html:not(.dark) .VPHome {
+  background: radial-gradient(ellipse,
+      rgba(var(--bg-gradient-home), 0.8) 0%, /* 建议用单独的亮色变量 */
+      rgba(var(--bg-gradient-home), 0.3) 300%);
+}
+
+// 背景图设置（保持你的原有逻辑）
+.VPHome::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* 覆盖整个父元素 */
+  background-image: url(/bg.webp); /* 深色模式背景图 */
+  background-size: cover;
+  z-index: -1; /* 放在遮罩下方 */
+}
+
+// 亮色模式切换背景图
+html:not(.dark) .VPHome::before {
+  background-image: url(/bgw.webp); /* 亮色模式背景图 */
+}
