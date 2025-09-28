@@ -3,7 +3,7 @@ layout: home
 # 首页部分元素定制
 blog:
  name: '@LYNN/BLOG'
- motto: 
+ motto: 简约风的 Vitepress 博客主题
  inspiring:
   - 且听风吟，静待花开。
   
