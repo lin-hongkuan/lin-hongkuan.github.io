@@ -1,6 +1,6 @@
 ---
 title: 文章标题 - 副标题  # 文章标题，支持副标题格式（用 - 分隔）
-top: 1                   # 置顶级别：1-3，数字越大越靠前，0表示不置顶
+top: 1                   # 置顶级别：1-3，数字越小越靠前，0表示不置顶
 date: 2025-01-01 12:00:00  # 发布日期和时间，格式：YYYY-MM-DD HH:MM:SS
 descriptionHTML: '       
 <span style="color:var(--description-font-color);">文章描述，支持HTML格式</span>
