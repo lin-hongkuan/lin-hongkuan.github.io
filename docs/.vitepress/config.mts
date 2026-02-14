@@ -23,6 +23,15 @@ export default defineConfig({
   markdown: {
     math: true
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern'
+        }
+      }
+    }
+  },
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
