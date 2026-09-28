@@ -65,6 +65,24 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/lin-hongkuan'
       }
-    ]
+    ],
+    sidebar: {
+      '/cwm/': [
+        {
+          text: 'Code World Model 学习手册',
+          collapsed: false,
+          items: [
+            { text: '总览', link: '/cwm/' },
+            { text: '01 · 直觉入门', link: '/cwm/01-intuition' },
+            { text: '02 · 系统架构', link: '/cwm/02-architecture' },
+            { text: '03 · Proxy', link: '/cwm/03-proxy' },
+            { text: '04 · 数据与训练', link: '/cwm/04-data-training' },
+            { text: '05 · 仓库与复现', link: '/cwm/05-repo-reproduction' },
+            { text: '06 · 批判性阅读', link: '/cwm/06-critique' },
+            { text: '07 · 科研路线', link: '/cwm/07-research-roadmap' }
+          ]
+        }
+      ]
+    }
   }
 })
