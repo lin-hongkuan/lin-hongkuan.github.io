@@ -23,6 +23,11 @@ export default defineConfig({
   markdown: {
     math: true
   },
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['script', {}, `window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, startup: { typeset: false } };`],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js', async: '' }]
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -32,12 +37,6 @@ export default defineConfig({
       }
     }
   },
-  // 详见：https://vitepress.dev/zh/reference/site-config#head
-  head: [
-    // 配置网站的图标（显示在浏览器的 tab 上）
-    // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
@@ -72,14 +71,21 @@ export default defineConfig({
           text: 'Code World Model 学习手册',
           collapsed: false,
           items: [
-            { text: '总览', link: '/cwm/' },
-            { text: '01 · 直觉入门', link: '/cwm/01-intuition' },
-            { text: '02 · 系统架构', link: '/cwm/02-architecture' },
-            { text: '03 · Proxy', link: '/cwm/03-proxy' },
-            { text: '04 · 数据与训练', link: '/cwm/04-data-training' },
-            { text: '05 · 仓库与复现', link: '/cwm/05-repo-reproduction' },
-            { text: '06 · 批判性阅读', link: '/cwm/06-critique' },
-            { text: '07 · 科研路线', link: '/cwm/07-research-roadmap' }
+            { text: '专题长文', link: '/cwm/' },
+            { text: '前往官方论文', link: 'https://arxiv.org/abs/2608.25927' },
+            { text: '前往官方仓库', link: 'https://github.com/buaacyw/code-world-model' }
+          ]
+        }
+      ],
+      '/world-agent/': [
+        {
+          text: 'World Agent 论文导读',
+          collapsed: false,
+          items: [
+            { text: '中文导读长文', link: '/world-agent/' },
+            { text: '原论文 PDF', link: 'https://arxiv.org/pdf/2609.32692' },
+            { text: '原论文 HTML', link: 'https://arxiv.org/html/2609.32692' },
+            { text: '代码与数据', link: 'https://github.com/HCPLab-SYSU/WorldAgent-Benchmark' }
           ]
         }
       ]
